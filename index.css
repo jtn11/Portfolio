@@ -1,0 +1,34 @@
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfdfc;
+            color: #333;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+        }
+        .nav-link.active {
+            color: #8c7a6b;
+            border-bottom: 2px solid #8c7a6b;
+        }
+        .nav-link:hover {
+            color: #8c7a6b;
+        }
+        .project-tab.active {
+            background-color: #8c7a6b;
+            color: #fdfdfc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }

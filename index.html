@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jatin Saini - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutral Harmony -->
+    <!-- Application Structure Plan: A single-page, vertically scrolling application with a fixed navigation bar for easy access to key sections: Home, Skills, Projects, and Education. The structure is designed for a narrative flow, starting with a strong introduction, showcasing technical abilities with an interactive chart, detailing project experience in a clear, tabbed layout, and concluding with educational background. This user-centric design allows recruiters to quickly grasp the candidate's profile and dive deeper into areas of interest without navigating away from the page, enhancing usability and engagement. -->
+    <!-- Visualization & Content Choices: 
+        - Skills: Report Info -> Core Skills. Goal -> Compare proficiency. Viz -> Radar Chart (Chart.js/Canvas). Interaction -> Hover for details. Justification -> A radar chart provides a compelling visual summary of skills across different domains (languages, backend, etc.), making it easier to assess strengths at a glance than a simple list.
+        - Projects: Report Info -> Solo Projects. Goal -> Organize and detail experience. Presentation -> Tabbed Interface (HTML/CSS/JS). Interaction -> Click tabs to switch between project details. Justification -> A tabbed layout organizes multiple projects cleanly, preventing a long, cluttered page. It allows users to focus on one project at a time, improving readability and information retention.
+        - Timeline: Report Info -> Education & Certifications. Goal -> Show chronological progression. Presentation -> Vertical Timeline (HTML/CSS). Interaction -> None, static display. Justification -> A vertical timeline is an intuitive way to present chronological data like education and certifications, clearly showing the career progression.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="antialiased">
+
+    <nav id="navbar" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-[#594d46]">Jatin Saini</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Home</a>
+                <a href="#skills" class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Skills</a>
+                <a href="#projects" class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Projects</a>
+                <a href="#education" class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Education</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <span class="w-6 h-0.5 bg-gray-700 block mb-1.5"></span>
+                <span class="w-6 h-0.5 bg-gray-700 block"></span>
+                <span class="w-4 h-0.5 bg-gray-700 block mt-1.5"></span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 text-gray-600">Home</a>
+            <a href="#skills" class="block py-2 text-gray-600">Skills</a>
+            <a href="#projects" class="block py-2 text-gray-600">Projects</a>
+            <a href="#education" class="block py-2 text-gray-600">Education</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="container mx-auto px-6 py-20 md:py-32 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold text-[#594d46] leading-tight">Jatin Saini</h2>
+            <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">Full-Stack Developer | Computer Science Student</p>
+            <p class="mt-6 text-gray-500 max-w-2xl mx-auto">
+                Motivated B.Tech Computer Science student with hands-on experience building full-stack applications using modern web technologies like React, Next.js, Node.js, and Firebase. Strong understanding of front-end and back-end development, with a focus on responsive design, real-time features, and clean code.
+            </p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="https://www.linkedin.com/in/jatin-saini-214795257/" target="_blank" class="text-[#8c7a6b] hover:text-[#594d46] transition-colors">LinkedIn</a>
+                <span class="text-gray-300">|</span>
+                <a href="https://github.com/jtn11" target="_blank" class="text-[#8c7a6b] hover:text-[#594d46] transition-colors">GitHub</a>
+                <span class="text-gray-300">|</span>
+                <a href="https://leetcode.com/u/jatinsainii007/" target="_blank" class="text-[#8c7a6b] hover:text-[#594d46] transition-colors">LeetCode</a>
+            </div>
+        </section>
+
+        <section id="skills" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-[#594d46]">Technical Skills</h3>
+                    <p class="text-gray-500 mt-2">A visual representation of my technical skills across different domains.</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-[#594d46]">Projects</h3>
+                    <p class="text-gray-500 mt-2">A selection of my work. Click on the tabs to learn more about each project.</p>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex justify-center border-b border-gray-200 mb-8">
+                        <button class="project-tab py-2 px-6 font-medium text-gray-600 focus:outline-none active" data-project="tasknest">Tasknest</button>
+                        <button class="project-tab py-2 px-6 font-medium text-gray-600 focus:outline-none" data-project="summariser">Summariser</button>
+                        <button class="project-tab py-2 px-6 font-medium text-gray-600 focus:outline-none" data-project="urlshortener">URL Shortener</button>
+                    </div>
+                    <div id="project-content" class="bg-white p-8 rounded-lg shadow-md">
+                        <!-- Project content will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-[#594d46]">Education & Certifications</h3>
+                    <p class="text-gray-500 mt-2">My academic journey and professional certifications.</p>
+                </div>
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative border-l-2 border-gray-200 pl-10">
+                        <div class="mb-10">
+                            <div class="absolute w-4 h-4 bg-[#8c7a6b] rounded-full -left-2 mt-1.5"></div>
+                            <p class="text-sm text-gray-500">Expected May 2026</p>
+                            <h4 class="text-xl font-semibold text-[#594d46]">B.Tech in Computer Science</h4>
+                            <p class="text-gray-600">KIET Group of Institutions, Dr. A.P.J. Abdul Kalam Technical University</p>
+                        </div>
+                        <div class="mb-10">
+                            <div class="absolute w-4 h-4 bg-[#8c7a6b] rounded-full -left-2 mt-1.5"></div>
+                            <p class="text-sm text-gray-500">Dec 2024</p>
+                            <h4 class="text-xl font-semibold text-[#594d46]">Programming Fundamentals using Python Part1</h4>
+                            <p class="text-gray-600">Infosys SpringBoard</p>
+                        </div>
+                        <div class="mb-10">
+                            <div class="absolute w-4 h-4 bg-[#8c7a6b] rounded-full -left-2 mt-1.5"></div>
+                            <p class="text-sm text-gray-500">Dec 2024</p>
+                            <h4 class="text-xl font-semibold text-[#594d46]">AWS Academy Cloud Foundations</h4>
+                            <p class="text-gray-600">Certification</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Jatin Saini. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
