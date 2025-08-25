@@ -10,14 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="index.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Warm Neutral Harmony -->
-    <!-- Application Structure Plan: A single-page, vertically scrolling application with a fixed navigation bar for easy access to key sections: Home, Skills, Projects, and Education. The structure is designed for a narrative flow, starting with a strong introduction, showcasing technical abilities with an interactive chart, detailing project experience in a clear, tabbed layout, and concluding with educational background. This user-centric design allows recruiters to quickly grasp the candidate's profile and dive deeper into areas of interest without navigating away from the page, enhancing usability and engagement. -->
-    <!-- Visualization & Content Choices: 
-        - Skills: Report Info -> Core Skills. Goal -> Compare proficiency. Viz -> Radar Chart (Chart.js/Canvas). Interaction -> Hover for details. Justification -> A radar chart provides a compelling visual summary of skills across different domains (languages, backend, etc.), making it easier to assess strengths at a glance than a simple list.
-        - Projects: Report Info -> Solo Projects. Goal -> Organize and detail experience. Presentation -> Tabbed Interface (HTML/CSS/JS). Interaction -> Click tabs to switch between project details. Justification -> A tabbed layout organizes multiple projects cleanly, preventing a long, cluttered page. It allows users to focus on one project at a time, improving readability and information retention.
-        - Timeline: Report Info -> Education & Certifications. Goal -> Show chronological progression. Presentation -> Vertical Timeline (HTML/CSS). Interaction -> None, static display. Justification -> A vertical timeline is an intuitive way to present chronological data like education and certifications, clearly showing the career progression.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 </head>
 
 <body class="antialiased">
@@ -34,17 +26,21 @@
                 <a href="#education"
                     class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Education</a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
-                <span class="w-6 h-0.5 bg-gray-700 block mb-1.5"></span>
-                <span class="w-6 h-0.5 bg-gray-700 block"></span>
-                <span class="w-4 h-0.5 bg-gray-700 block mt-1.5"></span>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none p-2 rounded-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                    <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
             </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#home" class="block py-2 text-gray-600">Home</a>
-            <a href="#skills" class="block py-2 text-gray-600">Skills</a>
-            <a href="#projects" class="block py-2 text-gray-600">Projects</a>
-            <a href="#education" class="block py-2 text-gray-600">Education</a>
+            <a href="#home" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Home</a>
+            <a href="#skills" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Skills</a>
+            <a href="#projects" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Projects</a>
+            <a href="#education" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Education</a>
         </div>
     </nav>
 
@@ -53,7 +49,7 @@
             <h2 class="text-4xl md:text-6xl font-bold text-[#594d46] leading-tight">Jatin Saini</h2>
             <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">Full-Stack Developer | Computer Science
                 Student</p>
-            <p class="mt-6 text-gray-500 max-w-2xl mx-auto">
+            <p class="mt-6 text-gray-500 max-w-2xl mx-auto px-4">
                 Motivated B.Tech Computer Science student currently diving deep into Full Stack Development. Gaining
                 experience with tools like React, Next.js, Node.js, and Firebase, and building a strong interest in
                 responsive design, real-time web apps, and clean code practices. Excited to keep learning and apply
@@ -91,16 +87,16 @@
                         project.</p>
                 </div>
                 <div class="max-w-4xl mx-auto">
-                    <div class="flex justify-center border-b border-gray-200 mb-8">
-                        <button class="project-tab py-2 px-6 font-medium text-gray-600 focus:outline-none active"
+                    <div class="flex flex-wrap justify-center border-b border-gray-200 mb-8">
+                        <button
+                            class="project-tab py-2 px-4 md:px-6 font-medium text-gray-600 focus:outline-none active"
                             data-project="tasknest">Tasknest</button>
-                        <button class="project-tab py-2 px-6 font-medium text-gray-600 focus:outline-none"
+                        <button class="project-tab py-2 px-4 md:px-6 font-medium text-gray-600 focus:outline-none"
                             data-project="summariser">Summariser</button>
-                        <button class="project-tab py-2 px-6 font-medium text-gray-600 focus:outline-none"
+                        <button class="project-tab py-2 px-4 md:px-6 font-medium text-gray-600 focus:outline-none"
                             data-project="urlshortener">URL Shortener</button>
                     </div>
-                    <div id="project-content" class="bg-white p-8 rounded-lg shadow-md">
-                        <!-- Project content will be injected here -->
+                    <div id="project-content" class="bg-white p-6 md:p-8 rounded-lg shadow-md">
                     </div>
                 </div>
             </div>

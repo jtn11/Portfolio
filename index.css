@@ -1,34 +1,53 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfdfc;
+    color: #333;
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fdfdfc;
-            color: #333;
-        }
-        .nav-link {
-            transition: color 0.3s, border-bottom-color 0.3s;
-        }
-        .nav-link.active {
-            color: #8c7a6b;
-            border-bottom: 2px solid #8c7a6b;
-        }
-        .nav-link:hover {
-            color: #8c7a6b;
-        }
-        .project-tab.active {
-            background-color: #8c7a6b;
-            color: #fdfdfc;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 400px;
-            }
-        }
+.nav-link {
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.nav-link.active {
+    color: #8c7a6b;
+    border-bottom: 2px solid #8c7a6b;
+}
+
+.nav-link:hover {
+    color: #8c7a6b;
+}
+
+.project-tab {
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 9999px;
+    /* Added for a rounded look */
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+}
+
+.project-tab.active {
+    background-color: #8c7a6b;
+    color: #fdfdfc;
+}
+
+.project-tab:hover:not(.active) {
+    background-color: #f0f0f0;
+}
+
+/* Responsive Chart Container */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    /* Adjust height for mobile */
+    height: 250px;
+    max-height: 400px;
+}
+
+@media (min-width: 768px) {
+    .chart-container {
+        height: 400px;
+    }
+}
