@@ -51,12 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             title: "AI Agent Orchestration Tool",
             date: "Sept 2025",
-            description: "An experimental project using Google’s Agent Development Kit (ADK) to explore how natural language can be used to create task-specific AI agents.",
+            description: "Engineered a meta-agent with the Google Agent Development Kit (ADK) that can dynamically generate executable Python scripts for specialized AI agents based on natural language descriptions.",
             points: [
-                "Configured a meta-agent that could generate simple Python scripts based on user instructions.",
-                "Set up a modular framework where agents could act as interviewers, information retrievers, or general-purpose assistants.",
-                "Gained hands-on exposure to agentic workflows, tool use, and automation concepts.",
-                "Explored modern AI development kits to understand how multi-agent systems can be applied in real-world scenarios."
+                "Demonstrated proficiency in agentic workflows by building a single agent that can perform a complex, multi-step task and also serve as a general conversational assistant.",
+                "Showcased an understanding of multi-agent system principles and conditional logic, allowing the agent to dynamically switch between acting as a builder or a chatbot based on user intent.",
+                "Gained practical experience in orchestrating tool use and agent behavior, goal-oriented AI systems beyond simple conversational models."
             ],
             tech: ["Google ADK", "Python", "NLP", "Agentic Workflows"]
 
