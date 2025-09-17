@@ -25,6 +25,8 @@
                     class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Projects</a>
                 <a href="#education"
                     class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Education</a>
+                <a href="#contact"
+                    class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Contact</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none p-2 rounded-md">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -41,6 +43,7 @@
             <a href="#skills" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Skills</a>
             <a href="#projects" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Projects</a>
             <a href="#education" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Education</a>
+            <a href="#contact" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Contact</a>
         </div>
     </nav>
 
@@ -92,9 +95,11 @@
                             class="project-tab py-2 px-4 md:px-6 font-medium text-gray-600 focus:outline-none active"
                             data-project="tasknest">Tasknest</button>
                         <button class="project-tab py-2 px-4 md:px-6 font-medium text-gray-600 focus:outline-none"
-                            data-project="summariser">Summariser</button>
+                            data-project="summariser">AI Summariser</button>
+                            <button class="project-tab py-2 px-4 md:px-6 font-medium text-gray-600 focus:outline-none"
+                            data-project="aiagent">AI Agent Orchestration Tool</button>
                         <button class="project-tab py-2 px-4 md:px-6 font-medium text-gray-600 focus:outline-none"
-                            data-project="urlshortener">URL Shortener</button>
+                            data-project="ragchatbot">RAG-Powered AI Chatbot</button>
                     </div>
                     <div id="project-content" class="bg-white p-6 md:p-8 rounded-lg shadow-md">
                     </div>
@@ -130,6 +135,25 @@
                             <h4 class="text-xl font-semibold text-[#594d46]">AWS Academy Cloud Foundations</h4>
                             <p class="text-gray-600">Certification</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-[#594d46]">Get In Touch</h3>
+                    <p class="text-gray-500 mt-2">I'm open to new opportunities and collaborations. Feel free to reach out!</p>
+                </div>
+                <div class="max-w-md mx-auto text-center">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <p class="text-lg text-gray-700">You can reach me via email at:</p>
+                        <a href="mailto:jatinsainii2003@gmail.com" id="email-link" class="text-xl font-semibold text-[#8c7a6b] hover:text-[#594d46] my-2 inline-block">jatinsainii2003@gmail.com</a>
+                        <button id="copy-email-btn" class="mt-4 bg-[#8c7a6b] text-white px-6 py-2 rounded-md hover:bg-[#594d46] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8c7a6b]">
+                            Copy Email
+                        </button>
+                        <p id="copy-success-msg" class="text-green-600 mt-2 h-5 text-sm"></p>
                     </div>
                 </div>
             </div>

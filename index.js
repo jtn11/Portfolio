@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const projects = {
         tasknest: {
             title: "Tasknest",
-            date: "July 2025 - Present",
+            date: "July 2025",
             description: "A collaborative task management platform using Next.js, React, TypeScript, and Firebase with real-time updates and secure authentication.",
             points: [
                 "Implemented task assignment, workspace collaboration, and integrated a Node.js + Express backend with Firestore for scalable and efficient data handling."
@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
             tech: ["Next.js", "React", "TypeScript", "Firebase", "Node.js", "Express", "Firestore"]
         },
         summariser: {
-            title: "Summariser",
-            date: "May 2025",
+            title: "AI Summariser",
+            date: "Aug 2025",
             description: "A browser extension that generates concise summaries of webpage content using the Google Gemini API.",
             points: [
                 "Built a browser extension using JavaScript that extracts webpage content and sends it to the Google Gemini API to generate concise summaries.",
@@ -47,15 +47,31 @@ document.addEventListener('DOMContentLoaded', function () {
             ],
             tech: ["JavaScript", "Google Gemini API", "DOM Manipulation", "Browser Extensions"]
         },
-        urlshortener: {
-            title: "URL Shortener",
-            date: "Undated",
-            description: "A basic URL shortener developed to demonstrate core web development principles.",
+        aiagent: {
+
+            title: "AI Agent Orchestration Tool",
+            date: "Sept 2025",
+            description: "An experimental project using Google’s Agent Development Kit (ADK) to explore how natural language can be used to create task-specific AI agents.",
             points: [
-                "Developed a basic URL shortener using Node.js, Express, and EJS templating.",
-                "Implemented custom routing to generate and redirect short links."
+                "Configured a meta-agent that could generate simple Python scripts based on user instructions.",
+                "Set up a modular framework where agents could act as interviewers, information retrievers, or general-purpose assistants.",
+                "Gained hands-on exposure to agentic workflows, tool use, and automation concepts.",
+                "Explored modern AI development kits to understand how multi-agent systems can be applied in real-world scenarios."
             ],
-            tech: ["Node.js", "Express", "EJS"]
+            tech: ["Google ADK", "Python", "NLP", "Agentic Workflows"]
+
+        },
+        ragchatbot: {
+            title: "RAG-Powered AI Chatbot",
+            date: "Sept 2025",
+            description: "A Retrieval-Augmented Generation (RAG) chatbot designed to deliver context-aware responses over private datasets.",
+            points: [
+                "Configured and deployed a local Llama 3.1:8B model using Ollama for low-latency inference without relying on external APIs.",
+                "Integrated Flowise with a vector database and embedding model to enable semantic search and prompt augmentation.",
+                "Implemented conversational memory for contextual continuity across queries.",
+                "Explored modern LLM concepts such as embeddings, context injection, and prompt engineering while building a full-stack AI pipeline."
+            ],
+            tech: ["Ollama", "Llama 3.1:8B", "Flowise", "Vector Database", "Embeddings"]
         }
     };
 
@@ -136,5 +152,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         }
+    });
+
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    const emailLink = document.getElementById('email-link');
+    const copySuccessMsg = document.getElementById('copy-success-msg');
+
+    copyEmailBtn.addEventListener('click', () => {
+        const email = emailLink.innerText;
+        navigator.clipboard.writeText(email).then(() => {
+            copySuccessMsg.textContent = 'Email copied to clipboard!';
+            setTimeout(() => {
+                copySuccessMsg.textContent = '';
+            }, 2000);
+        });
     });
 });
