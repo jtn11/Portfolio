@@ -12,160 +12,261 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="antialiased">
+<nav>
+    <div class="nav-container">
+        <div class="logo">Jatin Saini</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <nav id="navbar" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-[#594d46]">Jatin Saini</h1>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Home</a>
-                <a href="#skills"
-                    class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Skills</a>
-                <a href="#projects"
-                    class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Projects</a>
-                <a href="#education"
-                    class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Education</a>
-                <a href="#contact"
-                    class="nav-link text-gray-600 font-medium pb-1 border-b-2 border-transparent">Contact</a>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <h1>Jatin Saini</h1>
+    <p class="subtitle">Full-Stack Developer | Computer Science Student</p>
+    <p>
+        Motivated B.Tech Computer Science student currently diving deep into Full Stack Development.
+        Gaining experience with tools like React, Next.js, Node.js, and Firebase, and building a strong
+        interest in responsive design, real-time web apps, and clean code practices. Excited to keep
+        learning and apply skills in real-world projects.
+    </p>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/jatin-saini-214795257/" target="_blank">LinkedIn</a>
+        <span>|</span>
+        <a href="https://github.com/jtn11" target="_blank">GitHub</a>
+        <span>|</span>
+        <a href="https://leetcode.com/u/jatinsainii007/" target="_blank">LeetCode</a>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <div class="section-header">
+        <h2>Technical Skills</h2>
+        <p>My expertise across different technologies and frameworks</p>
+    </div>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none p-2 rounded-md">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6h16M4 12h16m-7 6h7"></path>
-                    <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#home" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Home</a>
-            <a href="#skills" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Skills</a>
-            <a href="#projects" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Projects</a>
-            <a href="#education" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Education</a>
-            <a href="#contact" class="block py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-md">Contact</a>
+        <div class="skill-card">
+            <div class="skill-name">Java</div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+            </div>
         </div>
-    </nav>
-
-    <main>
-        <section id="home" class="container mx-auto px-6 py-20 md:py-32 text-center">
-            <h2 class="text-4xl md:text-6xl font-bold text-[#594d46] leading-tight">Jatin Saini</h2>
-            <p class="text-lg md:text-xl text-gray-600 mt-4 max-w-3xl mx-auto">Full-Stack Developer | Computer Science
-                Student</p>
-            <p class="mt-6 text-gray-500 max-w-2xl mx-auto px-4">
-                Motivated B.Tech Computer Science student currently diving deep into Full Stack Development. Gaining
-                experience with tools like React, Next.js, Node.js, and Firebase, and building a strong interest in
-                responsive design, real-time web apps, and clean code practices. Excited to keep learning and apply
-                skills in real-world projects. </p>
-            <div class="mt-8 flex justify-center space-x-4">
-                <a href="https://www.linkedin.com/in/jatin-saini-214795257/" target="_blank"
-                    class="text-[#8c7a6b] hover:text-[#594d46] transition-colors">LinkedIn</a>
-                <span class="text-gray-300">|</span>
-                <a href="https://github.com/jtn11" target="_blank"
-                    class="text-[#8c7a6b] hover:text-[#594d46] transition-colors">GitHub</a>
-                <span class="text-gray-300">|</span>
-                <a href="https://leetcode.com/u/jatinsainii007/" target="_blank"
-                    class="text-[#8c7a6b] hover:text-[#594d46] transition-colors">LeetCode</a>
+        <div class="skill-card">
+            <div class="skill-name">React.js</div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
             </div>
-        </section>
-
-        <section id="skills" class="bg-white py-20 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl md:text-4xl font-bold text-[#594d46]">Technical Skills</h3>
-                    <p class="text-gray-500 mt-2">A visual representation of my technical skills across different
-                        domains.</p>
-                </div>
-                <div class="chart-container">
-                    <canvas id="skillsChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="py-20 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl md:text-4xl font-bold text-[#594d46]">Projects</h3>
-                    <p class="text-gray-500 mt-2">A selection of my work. Click on the tabs to learn more about each
-                        project.</p>
-                </div>
-                <div class="max-w-4xl mx-auto">
-                    <div class="flex flex-wrap justify-center border-b border-gray-200 mb-8">
-                        <button
-                            class="project-tab py-2 px-4 md:px-6 font-medium text-gray-600 focus:outline-none active"
-                            data-project="tasknest">Tasknest</button>
-                        <button class="project-tab py-2 px-4 md:px-6 font-medium text-gray-600 focus:outline-none"
-                            data-project="summariser">AI Summariser</button>
-                            <button class="project-tab py-2 px-4 md:px-6 font-medium text-gray-600 focus:outline-none"
-                            data-project="aiagent">AI Agent Orchestration Tool</button>
-                        <button class="project-tab py-2 px-4 md:px-6 font-medium text-gray-600 focus:outline-none"
-                            data-project="ragchatbot">RAG-Powered AI Chatbot</button>
-                    </div>
-                    <div id="project-content" class="bg-white p-6 md:p-8 rounded-lg shadow-md">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="bg-white py-20 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h3 class="text-3xl md:text-4xl font-bold text-[#594d46]">Education & Certifications</h3>
-                    <p class="text-gray-500 mt-2">My academic journey and professional certifications.</p>
-                </div>
-                <div class="max-w-3xl mx-auto">
-                    <div class="relative border-l-2 border-gray-200 pl-10">
-                        <div class="mb-10">
-                            <div class="absolute w-4 h-4 bg-[#8c7a6b] rounded-full -left-2 mt-1.5"></div>
-                            <p class="text-sm text-gray-500">Expected May 2026</p>
-                            <h4 class="text-xl font-semibold text-[#594d46]">B.Tech in Computer Science</h4>
-                            <p class="text-gray-600">KIET Group of Institutions, Dr. A.P.J. Abdul Kalam Technical
-                                University</p>
-                        </div>
-                        <div class="mb-10">
-                            <div class="absolute w-4 h-4 bg-[#8c7a6b] rounded-full -left-2 mt-1.5"></div>
-                            <p class="text-sm text-gray-500">Dec 2024</p>
-                            <h4 class="text-xl font-semibold text-[#594d46]">Programming Fundamentals using Python Part1
-                            </h4>
-                            <p class="text-gray-600">Infosys SpringBoard</p>
-                        </div>
-                        <div class="mb-10">
-                            <div class="absolute w-4 h-4 bg-[#8c7a6b] rounded-full -left-2 mt-1.5"></div>
-                            <p class="text-sm text-gray-500">Dec 2024</p>
-                            <h4 class="text-xl font-semibold text-[#594d46]">AWS Academy Cloud Foundations</h4>
-                            <p class="text-gray-600">Certification</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-20 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl md:text-4xl font-bold text-[#594d46]">Get In Touch</h3>
-                    <p class="text-gray-500 mt-2">I'm open to new opportunities and collaborations. Feel free to reach out!</p>
-                </div>
-                <div class="max-w-md mx-auto text-center">
-                    <div class="bg-white p-8 rounded-lg shadow-md">
-                        <p class="text-lg text-gray-700">You can reach me via email at:</p>
-                        <a href="mailto:jatinsainii2003@gmail.com" id="email-link" class="text-xl font-semibold text-[#8c7a6b] hover:text-[#594d46] my-2 inline-block">jatinsainii2003@gmail.com</a>
-                        <button id="copy-email-btn" class="mt-4 bg-[#8c7a6b] text-white px-6 py-2 rounded-md hover:bg-[#594d46] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8c7a6b]">
-                            Copy Email
-                        </button>
-                        <p id="copy-success-msg" class="text-green-600 mt-2 h-5 text-sm"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Jatin Saini. All rights reserved.</p>
         </div>
-    </footer>
+        <div class="skill-card">
+            <div class="skill-name">Next.js</div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-name">Node.js</div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-name">TypeScript</div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-name">Firebase</div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+            </div>
+        </div>
+    </div>
+</section>
 
-</body>
+<!-- Projects Section -->
+<section id="projects">
+    <div class="section-header">
+        <h2>Projects</h2>
+        <p>A showcase of my recent work and innovations</p>
+    </div>
+    <div class="projects-container">
+        <!-- Tasknest -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">Tasknest</h3>
+                <p class="project-date">July 2025</p>
+            </div>
+            <p class="project-description">
+                A collaborative task management platform using Next.js, React, TypeScript, and Firebase
+                with real-time updates and secure authentication.
+            </p>
+            <ul class="project-points">
+                <li>Implemented task assignment, workspace collaboration, and integrated a Node.js + Express backend
+                    with Firestore for scalable and efficient data handling.</li>
+            </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+            </div>
+        </div>
+
+        <!-- AI Speech Translator -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">AI-Powered Speech Translator</h3>
+                <p class="project-date">Nov 2025</p>
+            </div>
+            <p class="project-description">
+                A real-time speech translation application that converts Hindi audio to English text using advanced AI
+                models.
+            </p>
+            <ul class="project-points">
+                <li>Built a React + TypeScript speech translation app using MediaRecorder to capture audio and Groq's
+                    Whisper API to translate Hindi speech to English text.</li>
+                <li>Implemented async API handling with FormData uploads, error handling for API failures and microphone
+                    access, and state management for recording, loading, and translation states.</li>
+            </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Groq Whisper API</span>
+                <span class="tech-tag">MediaRecorder</span>
+            </div>
+        </div>
+
+        <!-- AI Summariser -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">AI Summariser</h3>
+                <p class="project-date">Aug 2025</p>
+            </div>
+            <p class="project-description">
+                A browser extension that generates concise summaries of webpage content using the Google Gemini API.
+            </p>
+            <ul class="project-points">
+                <li>Built a browser extension using JavaScript that extracts webpage content and sends it to the Google
+                    Gemini API to generate concise summaries.</li>
+                <li>Injected custom scripts into active tabs, handled DOM parsing, and implemented API integration for
+                    real-time, AI-powered summarization.</li>
+            </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Google Gemini API</span>
+                <span class="tech-tag">Browser Extensions</span>
+            </div>
+        </div>
+
+        <!-- AI Agent Orchestration -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">AI Agent Orchestration Tool</h3>
+                <p class="project-date">Sept 2025</p>
+            </div>
+            <p class="project-description">
+                Engineered a meta-agent with the Google Agent Development Kit (ADK) that can dynamically generate
+                executable Python scripts for specialized AI agents based on natural language descriptions.
+            </p>
+            <ul class="project-points">
+                <li>Demonstrated proficiency in agentic workflows by building a single agent that can perform a complex,
+                    multi-step task and also serve as a general conversational assistant.</li>
+                <li>Showcased an understanding of multi-agent system principles and conditional logic, allowing the
+                    agent to dynamically switch between acting as a builder or a chatbot based on user intent.</li>
+            </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">Google ADK</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Agentic Workflows</span>
+            </div>
+        </div>
+
+        <!-- RAG Chatbot -->
+        <div class="project-card">
+            <div class="project-header">
+                <h3 class="project-title">RAG-Powered AI Chatbot</h3>
+                <p class="project-date">Sept 2025</p>
+            </div>
+            <p class="project-description">
+                A Retrieval-Augmented Generation (RAG) chatbot designed to deliver context-aware responses over private
+                datasets.
+            </p>
+            <ul class="project-points">
+                <li>Configured and deployed a local Llama 3.1:8B model using Ollama for low-latency inference without
+                    relying on external APIs.</li>
+                <li>Integrated Flowise with a vector database and embedding model to enable semantic search and prompt
+                    augmentation.</li>
+                <li>Implemented conversational memory for contextual continuity across queries.</li>
+            </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">Ollama</span>
+                <span class="tech-tag">Llama 3.1</span>
+                <span class="tech-tag">Flowise</span>
+                <span class="tech-tag">Vector Database</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education">
+    <div class="section-header">
+        <h2>Education & Certifications</h2>
+        <p>My academic journey and professional achievements</p>
+    </div>
+    <div class="timeline">
+        <div class="timeline-item">
+            <p class="timeline-date">Expected May 2026</p>
+            <h3 class="timeline-title">B.Tech in Computer Science</h3>
+            <p class="timeline-subtitle">KIET Group of Institutions, Dr. A.P.J. Abdul Kalam Technical University</p>
+        </div>
+        <div class="timeline-item">
+            <p class="timeline-date">Dec 2024</p>
+            <h3 class="timeline-title">Programming Fundamentals using Python Part 1</h3>
+            <p class="timeline-subtitle">Infosys SpringBoard</p>
+        </div>
+        <div class="timeline-item">
+            <p class="timeline-date">Dec 2024</p>
+            <h3 class="timeline-title">AWS Academy Cloud Foundations</h3>
+            <p class="timeline-subtitle">Certification</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>I'm open to new opportunities and collaborations</p>
+    </div>
+    <div class="contact-card">
+        <p>You can reach me via email at:</p>
+        <a href="mailto:jatinsainii2003@gmail.com" class="email-link">jatinsainii2003@gmail.com</a>
+        <br>
+        <button class="copy-btn" onclick="copyEmail()">Copy Email</button>
+        <p class="copy-message" id="copyMessage"></p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Jatin Saini. All rights reserved.</p>
+</footer>
 
 </html>
