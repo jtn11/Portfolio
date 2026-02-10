@@ -138,6 +138,7 @@
             <div class="project-header">
                 <h3 class="project-title">AI-Powered Speech Translator</h3>
                 <p class="project-date">Nov 2025</p>
+                <p>GitHub</p>
             </div>
             <p class="project-description">
                 A real-time speech translation application that converts Hindi audio to English text using advanced AI
@@ -204,29 +205,45 @@
         </div>
 
         <!-- RAG Chatbot -->
-        <div class="project-card">
-            <div class="project-header">
-                <h3 class="project-title">RAG-Powered AI Chatbot</h3>
-                <p class="project-date">Sept 2025</p>
-            </div>
-            <p class="project-description">
-                A Retrieval-Augmented Generation (RAG) chatbot designed to deliver context-aware responses over private
-                datasets.
-            </p>
-            <ul class="project-points">
-                <li>Configured and deployed a local Llama 3.1:8B model using Ollama for low-latency inference without
-                    relying on external APIs.</li>
-                <li>Configured Flowise nodes for embeddings, vector search, and context-aware Llama responses.</li>
-                <li>Explored modern LLM concepts including embeddings, prompt engineering, and the overall
-                    architecture of RAG pipelines.</li>
-            </ul>
-            <div class="tech-tags">
-                <span class="tech-tag">Ollama</span>
-                <span class="tech-tag">Llama 3.1</span>
-                <span class="tech-tag">Flowise</span>
-                <span class="tech-tag">Vector Database</span>
-            </div>
-        </div>
+      <div class="project-card">
+  <div class="project-header">
+    <h3 class="project-title">RAG-Powered AI Chatbot</h3>
+    <p class="project-date">Jan 2026</p>
+  </div>
+
+  <p class="project-description">
+    A production-ready Retrieval-Augmented Generation (RAG) chatbot that allows users to upload PDFs and ask
+    context-aware questions over private documents.
+  </p>
+
+  <ul class="project-points">
+    <li>
+      Built a complete RAG pipeline using FastAPI, ChromaDB, and HuggingFace embeddings to ingest, chunk,
+      embed, and retrieve document context.
+    </li>
+    <li>
+      Implemented PDF upload, text extraction, normalization, and persistent vector storage with namespace-based
+      retrieval.
+    </li>
+    <li>
+      Integrated Groq LLMs for grounded answer generation, ensuring responses are strictly based on retrieved
+      document chunks.
+    </li>
+    <li>
+      Designed a Next.js dashboard with conditional chat logic to switch seamlessly between normal LLM chat
+      and document-aware RAG responses.
+    </li>
+  </ul>
+
+  <div class="tech-tags">
+    <span class="tech-tag">Next.js</span>
+    <span class="tech-tag">FastAPI</span>
+    <span class="tech-tag">ChromaDB</span>
+    <span class="tech-tag">LangChain</span>
+    <span class="tech-tag">Groq LLM</span>
+    <span class="tech-tag">RAG</span>
+  </div>
+</div>
 
         <div class="project-card">
             <div class="project-header">
